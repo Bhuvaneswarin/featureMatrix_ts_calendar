@@ -19,14 +19,46 @@
 <body>
     <div class="col-lg-8 control-section">
         <div id="wrapper">
-            <input id="dateTimepicker" type="text">
+            <input type="text" id="date">
         </div>
     </div>
 
     <div class="col-lg-4 property-section">
-        <input type="text" tabindex="1" id='dateformats' />
+        <div>
+            <select id="dateformats" class="form-control">
+                <option value="d">d</option>
+                <option value="E">E</option>
+                <option value="Ed">Ed</option>
+                <option value="Ehm">Ehm</option>
+                <option value="EHm">EHm</option>
+                <option value="Ehms">Ehms</option>
+                <option value="EHms">EHms</option>
+                <option value="Gy">Gy</option>
+                <option value="GyMMM">GyMMM</option>
+                <option value="GyMMMd">GyMMMd</option>
+                <option value="GyMMMEd">GyMMMEd</option>
+                <option value="h">h</option>
+                <option value="H">H</option>
+                <option value="hm">hm</option>
+                <option value="Hm">Hm</option>
+                <option value="hms">hms</option>
+                <option value="Hms">Hms</option>
+                <option value="M">M</option>
+                <option value="Md">Md</option>
+                <option value="MEd">MEd</option>
+                <option value="MMM">MMM</option>
+                <option value="MMMEd">MMMEd</option>
+                <option value="MMMd">MMMd</option>
+                <option value="y">y</option>
+                <option value="yM">yM</option>
+                <option value="yMd">yMd</option>
+                <option value="yMEd">yMEd</option>
+                <option value="yMMM">yMMM</option>
+                <option value="yMMMd">yMMMd</option>
+                <option value="yMMMEd">yMMMEd</option>
+            </select>
+        </div>
     </div>
-
     <style>
         #wrapper {
             max-width: 246px;

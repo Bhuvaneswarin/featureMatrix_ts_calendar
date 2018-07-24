@@ -1,17 +1,16 @@
-import { DateTimePicker } from "../resources/component";
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
+import { Internationalization } from '@syncfusion/ej2-base';
 
-let dateTimePicker: DateTimePicker = new DateTimePicker({format: 'dd-MMM-yy hh:mm a', value: new Date()});
-dateTimePicker.appendTo('#dateTimepicker');
-
-let data: string[] = ['dd-MMM-yy', 'yyyy-MM-dd', 'dd-MMMM', 'dd-MMM-yy hh:mm a', 'yyyy-MM-dd HH:mm', 'dd-MMMM HH:mm'];
+let intl: Internationalization = new Internationalization();
 
 let dropdownInstance: DropDownList = new DropDownList({
-    dataSource: data,
+    placeholder: "Select a date format",
     change: onChange
 });
 dropdownInstance.appendTo('#dateformats');
 
 function onChange(): void {
-    dateTimePicker.format = <string>dropdownInstance.value;
+    let value: string = <string>dropdownInstance.value;
+    let formattedString: string = intl.formatDate(new Date('1/12/2014 10:20:33'), { skeleton: value });
+    (<HTMLInputElement>document.getElementById('date')).value  =  formattedString;
 }
