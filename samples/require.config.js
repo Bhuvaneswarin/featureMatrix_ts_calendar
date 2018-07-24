@@ -47,8 +47,12 @@ require.config({
             name: '@syncfusion/ej2-buttons',
             location: '../../../node_modules/@syncfusion/ej2-buttons',
             main: 'index.js'
+        },
+        {
+            name: '@syncfusion/ej2-dropdowns',
+            location: '../../../node_modules/@syncfusion/ej2-dropdowns',
+            main: 'index.js'
         }   
-
     ]
 
 });
